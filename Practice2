@@ -1,0 +1,11 @@
+ 1 FROM python:3.8
+  2
+  3 WORKDIR /app
+  4
+  5 COPY app.py /app
+  6
+  7 COPY requirements.txt /app
+  8
+  9 RUN pip install --no-cache-dir -r requirements.txt
+ 10
+ 11 CMD ["python", "app.py"]
